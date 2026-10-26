@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Mentonasu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom print stylesheet */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .print-full-width {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-200 min-h-screen flex flex-col">
+
+    <!-- Toast Notification for Copy Action -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-slate-700 dark:border-slate-300 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-lg"></i>
+        <span id="toast-message" class="text-sm font-medium">Email address copied to clipboard!</span>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Brand Logo / Name -->
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-sky-500/20">
+                    M
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Mentonasu</span>
+            </div>
+
+            <!-- Header Actions -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <button id="theme-toggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" title="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
+                </button>
+
+                <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm font-medium transition-colors">
+                    <i class="fa-solid fa-print"></i>
+                    Print
+                </button>
+
+                <a href="mailto:bradmansch8@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold shadow-sm transition-all shadow-sky-600/20 active:scale-95">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span class="hidden sm:inline">Contact Us</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Document Title Banner -->
+        <div class="mb-8 lg:mb-12 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-700/60 shadow-sm relative overflow-hidden print-full-width">
+            <div class="absolute -top-24 -right-24 w-72 h-72 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 text-xs font-semibold uppercase tracking-wider mb-4">
+                    <i class="fa-solid fa-shield-halved"></i> Legal Transparency
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-3">
+                    Privacy Policy
+                </h1>
+                <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed">
+                    At <strong class="text-slate-900 dark:text-white">Mentonasu</strong>, we prioritize your trust and privacy. This document outlines how we collect, use, safeguard, and handle your data when you interact with our services.
+                </p>
+                
+                <div class="mt-6 pt-6 border-t border-slate-100 dark:border-slate-700/60 flex flex-wrap items-center justify-between gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 font-medium">
+                    <div class="flex items-center gap-4">
+                        <span><i class="fa-regular fa-calendar-check mr-1.5 text-sky-500"></i> <strong>Last Updated:</strong> October 2026</span>
+                        <span><i class="fa-regular fa-clock mr-1.5 text-sky-500"></i> ~8 min read</span>
+                    </div>
+                    <div class="no-print">
+                        <button onclick="copyEmail()" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors inline-flex items-center gap-1.5">
+                            <i class="fa-regular fa-copy"></i>
+                            <span>bradmansch8@gmail.com</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Two Column Layout: Table of Contents + Content -->
+        <div class="lg:grid lg:grid-cols-12 lg:gap-10 items-start">
+            
+            <!-- Sticky Sidebar Navigation (Desktop) -->
+            <aside class="hidden lg:block lg:col-span-4 sticky top-24 no-print">
+                <nav class="bg-white dark:bg-slate-800/90 rounded-2xl p-5 border border-slate-200/80 dark:border-slate-700/60 shadow-sm max-h-[calc(100vh-8rem)] overflow-y-auto">
+                    <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-4 px-3">
+                        Table of Contents
+                    </h2>
+                    <ul class="space-y-1 text-sm font-medium" id="toc-list">
+                        <li><a href="#overview" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">1. Overview & Scope</a></li>
+                        <li><a href="#information-we-collect" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">2. Information We Collect</a></li>
+                        <li><a href="#how-we-use-information" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">3. How We Use Your Information</a></li>
+                        <li><a href="#sharing-and-disclosure" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">4. Information Sharing & Disclosure</a></li>
+                        <li><a href="#cookies-and-tracking" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">5. Cookies & Tracking Technologies</a></li>
+                        <li><a href="#data-security-retention" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">6. Data Security & Retention</a></li>
+                        <li><a href="#your-rights-choices" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">7. Your Rights & Privacy Choices</a></li>
+                        <li><a href="#childrens-privacy" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">8. Children's Privacy (COPPA)</a></li>
+                        <li><a href="#third-party-links" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">9. Third-Party Links & Services</a></li>
+                        <li><a href="#international-transfers" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">10. International Data Transfers</a></li>
+                        <li><a href="#policy-changes" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">11. Changes to This Policy</a></li>
+                        <li><a href="#contact-us" class="toc-item block px-3 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700/50 hover:text-sky-600 dark:hover:text-sky-400 transition-colors font-semibold text-sky-600 dark:text-sky-400">12. Contact Us</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Policy Sections Content Column -->
+            <div class="lg:col-span-8 bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-10 border border-slate-200/80 dark:border-slate-700/60 shadow-sm print-full-width space-y-10">
+
+                <!-- Section 1 -->
+                <section id="overview" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">1</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Overview & Scope</h2>
+                    </div>
+                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                        <p>
+                            Welcome to <strong>Mentonasu</strong> ("we," "our," or "us"). This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our application, website, and related software services (collectively, the "Services").
+                        </p>
+                        <p>
+                            By accessing or using Mentonasu, you agree to the collection and use of information in accordance with this policy. If you do not agree with the terms outlined here, please refrain from using our application and services.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 2 -->
+                <section id="information-we-collect" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">2</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Information We Collect</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                        <p>
+                            We collect information to provide better services to all our users. The types of data we collect depend on how you interact with Mentonasu:
+                        </p>
+
+                        <div class="grid gap-4 sm:grid-cols-2 mt-4">
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-700/40">
+                                <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-user-gear text-sky-500"></i> Personal Information
+                                </div>
+                                <p class="text-sm">Information you provide when creating an account or contacting us, such as your name, email address (<strong class="text-slate-800 dark:text-slate-200">bradmansch8@gmail.com</strong> for inquiries), account credentials, and communication preferences.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-700/40">
+                                <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-laptop-code text-sky-500"></i> Usage & Log Data
+                                </div>
+                                <p class="text-sm">Details on how you interact with the app, including feature usage, access timestamps, crash reports, performance logs, and interaction history.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-700/40">
+                                <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-mobile-screen-button text-sky-500"></i> Device Information
+                                </div>
+                                <p class="text-sm">Hardware specifications, operating system version, unique device identifiers, IP address, mobile network details, and language settings.</p>
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200/60 dark:border-slate-700/40">
+                                <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2 mb-2">
+                                    <i class="fa-solid fa-location-dot text-sky-500"></i> General Location Data
+                                </div>
+                                <p class="text-sm">Approximate location inferred from your IP address to customize localization, language, and applicable legal regional settings.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 3 -->
+                <section id="how-we-use-information" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">3</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">How We Use Your Information</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>We utilize the collected information for specific, lawful purposes, including:</p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li><strong>Service Provision:</strong> To operate, maintain, deliver, and personalize the features of Mentonasu.</li>
+                            <li><strong>Customer Support:</strong> To address technical issues, respond to user inquiries, and fulfill support requests.</li>
+                            <li><strong>Product Improvement:</strong> To analyze user trends, perform quality assurance, fix bugs, and optimize app performance.</li>
+                            <li><strong>Communication:</strong> To send operational notifications, security alerts, updates, and response communications.</li>
+                            <li><strong>Security & Safety:</strong> To prevent fraud, protect system integrity, enforce our Terms of Service, and comply with legal requirements.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 4 -->
+                <section id="sharing-and-disclosure" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">4</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Information Sharing & Disclosure</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                        <p class="font-medium text-slate-900 dark:text-white">
+                            We do not sell, rent, or trade your personal information to third parties.
+                        </p>
+                        <p>We may share your information under the following limited circumstances:</p>
+                        
+                        <div class="space-y-3 pl-2">
+                            <div class="border-l-2 border-sky-500 pl-4 py-1">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Service Providers</h3>
+                                <p class="text-sm">Trusted third-party vendors who assist in hosting, analytics, technical infrastructure, and customer service under strict confidentiality obligations.</p>
+                            </div>
+                            <div class="border-l-2 border-sky-500 pl-4 py-1">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Legal Obligations</h3>
+                                <p class="text-sm">When required by law, court orders, subpoenas, or government regulations, or when good-faith belief dictates that legal disclosure is necessary.</p>
+                            </div>
+                            <div class="border-l-2 border-sky-500 pl-4 py-1">
+                                <h3 class="font-semibold text-slate-900 dark:text-white">Business Transfers</h3>
+                                <p class="text-sm">In connection with any merger, sale of company assets, financing, or acquisition of all or a portion of our business by another entity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 5 -->
+                <section id="cookies-and-tracking" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">5</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Cookies & Tracking Technologies</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>
+                            Mentonasu may use cookies, web beacons, SDKs, and local storage mechanisms to recognize your session, save user preferences, and analyze service traffic.
+                        </p>
+                        <p>
+                            You can manage cookie settings directly in your browser or mobile device settings. Note that disabling certain cookies may impact the functional performance of the application.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 6 -->
+                <section id="data-security-retention" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">6</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Data Security & Retention</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                        <p>
+                            We employ standard physical, technical, and organizational measures to safeguard user data against unauthorized access, loss, destruction, or alteration. These measures include encrypted storage, TLS/SSL data transmission, and controlled access restrictions.
+                        </p>
+                        <p>
+                            We retain user data only for as long as necessary to fulfill the operational purposes described in this policy, satisfy legal or regulatory mandates, or resolve disputes.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 7 -->
+                <section id="your-rights-choices" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">7</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Your Privacy Rights & Choices</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-4">
+                        <p>
+                            Depending on your legal jurisdiction (e.g., CCPA/CPRA in California, GDPR in Europe), you have specific rights regarding your personal information:
+                        </p>
+
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700/80">
+                                <span class="font-bold text-slate-900 dark:text-white text-sm block mb-1">Right to Access / Know</span>
+                                <span class="text-xs">Request details about the personal data we hold and receive a copy of your information.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700/80">
+                                <span class="font-bold text-slate-900 dark:text-white text-sm block mb-1">Right to Correction</span>
+                                <span class="text-xs">Request correction of inaccurate or incomplete personal data records.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700/80">
+                                <span class="font-bold text-slate-900 dark:text-white text-sm block mb-1">Right to Erasure (Deletion)</span>
+                                <span class="text-xs">Request total or partial deletion of personal data from our systems.</span>
+                            </div>
+                            <div class="p-3.5 rounded-xl border border-slate-200 dark:border-slate-700/80">
+                                <span class="font-bold text-slate-900 dark:text-white text-sm block mb-1">Opt-Out Rights</span>
+                                <span class="text-xs">Unsubscribe from promotional communications or revoke optional permissions at any time.</span>
+                            </div>
+                        </div>
+
+                        <p class="text-sm italic pt-2">
+                            To exercise any of these privacy rights, please email us directly at <a href="mailto:bradmansch8@gmail.com" class="text-sky-600 dark:text-sky-400 underline hover:text-sky-700">bradmansch8@gmail.com</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 8 -->
+                <section id="childrens-privacy" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">8</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Children's Privacy (COPPA Compliance)</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>
+                            Mentonasu does not knowingly solicit or collect personal information from children under the age of 13 (or under 16 in certain legal jurisdictions) in compliance with the Children's Online Privacy Protection Act (COPPA).
+                        </p>
+                        <p>
+                            If you believe that a child has inadvertently provided us with personal information, please contact us immediately at <strong class="text-slate-900 dark:text-white">bradmansch8@gmail.com</strong> so we can take immediate steps to delete such data from our records.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 9 -->
+                <section id="third-party-links" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">9</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Third-Party Links & Services</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>
+                            Our Services may contain links to external websites, plug-ins, or third-party applications. Mentonasu is not responsible for the content, privacy policies, or practices of external third parties. We encourage users to read the privacy statements of any external site they visit.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 10 -->
+                <section id="international-transfers" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">10</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">International Data Transfers</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>
+                            Your information may be processed and stored on servers located outside of your state, province, or country, including in the United States. Data protection laws in these destinations may differ from those in your jurisdiction. By using Mentonasu, you consent to the transfer of your data across international borders in accordance with this Privacy Policy.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 11 -->
+                <section id="policy-changes" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">11</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Changes to This Privacy Policy</h2>
+                    </div>
+                    <div class="text-slate-600 dark:text-slate-300 leading-relaxed space-y-3">
+                        <p>
+                            We reserve the right to update or modify this Privacy Policy periodically to reflect shifts in technology, legal requirements, or app features. 
+                        </p>
+                        <p>
+                            Any updates will be posted on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically to stay informed about how we protect your information.
+                        </p>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100 dark:border-slate-700/60">
+
+                <!-- Section 12: Contact Us -->
+                <section id="contact-us" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-300 font-bold text-sm">12</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Contact Us</h2>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                        If you have questions, concerns, or requests regarding this Privacy Policy or data privacy practices at Mentonasu, please feel free to reach out to us:
+                    </p>
+
+                    <!-- Featured Contact Card -->
+                    <div class="bg-gradient-to-br from-sky-50 to-indigo-50 dark:from-slate-900/80 dark:to-slate-900 border border-sky-100 dark:border-slate-700 p-6 sm:p-8 rounded-2xl shadow-sm">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+                            <div class="space-y-2">
+                                <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Official Contact Email</span>
+                                <div class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                                    <i class="fa-regular fa-envelope text-sky-500"></i>
+                                    <span>bradmansch8@gmail.com</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">
+                                    Inquiries are generally addressed within 1–2 business days.
+                                </p>
+                            </div>
+
+                            <div class="flex flex-wrap gap-3">
+                                <a href="mailto:bradmansch8@gmail.com" class="px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-medium text-sm transition-all shadow-md shadow-sky-600/20 active:scale-95 inline-flex items-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    Send Email
+                                </a>
+                                <button onclick="copyEmail()" class="px-4 py-2.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 text-sm font-medium transition-colors inline-flex items-center gap-2">
+                                    <i class="fa-regular fa-copy"></i>
+                                    Copy Email
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-8 no-print transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs">M</div>
+                <span class="font-semibold text-slate-700 dark:text-slate-300">Mentonasu</span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#overview" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Back to Top</a>
+                <a href="mailto:bradmansch8@gmail.com" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Dark Mode Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        // Detect system preference or stored preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+
+        // Copy Email Helper Function
+        function copyEmail() {
+            const email = "bradmansch8@gmail.com";
+            
+            // Clipboard fallback mechanism
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = email;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                textArea.remove();
+            }
+
+            showToast("Email copied to clipboard!");
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Highlight Active Table of Contents Item on Scroll
+        window.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    const id = entry.target.getAttribute('id');
+                    const tocLink = document.querySelector(`.toc-item[href="#${id}"]`);
+                    if (tocLink) {
+                        if (entry.isIntersecting) {
+                            document.querySelectorAll('.toc-item').forEach(link => {
+                                link.classList.remove('bg-sky-50', 'dark:bg-sky-950/50', 'text-sky-600', 'dark:text-sky-400', 'font-semibold');
+                            });
+                            tocLink.classList.add('bg-sky-50', 'dark:bg-sky-950/50', 'text-sky-600', 'dark:text-sky-400', 'font-semibold');
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '-20% 0px -70% 0px'
+            });
+
+            document.querySelectorAll('section[id]').forEach((section) => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
